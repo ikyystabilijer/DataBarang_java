@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Data Barang</string>
+    <string name="title_data_barang">Data Barang</string>
+    <string name="title_halaman_bayar">Halaman Bayar</string>
+    <string name="label_keterangan">Keterangan Barang:</string>
+    <string name="label_harga">Harga Barang:</string>
+    <string name="label_qty">Jumlah (Unit):</string>
+    <string name="btn_checkout">Checkout Sekarang</string>
+    <string name="btn_bayar">Bayar Sekarang</string>
+    <string name="btn_kembali">Kembali ke Data Barang</string>
+    <string name="label_ringkasan">Ringkasan Pemesanan</string>
+    <string name="label_total_harga">Total Harga:</string>
 </resources>
