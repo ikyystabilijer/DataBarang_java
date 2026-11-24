@@ -22,7 +22,7 @@
             android:id="@+id/tvTitleHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data Barang"
+            android:text="Daftar Produk Barang"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -55,29 +55,26 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- Foto Barang Produk 1 -->
                     <ImageView
                         android:id="@+id/ivFotoBarang1"
                         android:layout_width="match_parent"
-                        android:layout_height="220dp"
+                        android:layout_height="180dp"
                         android:scaleType="fitCenter"
-                        android:contentDescription="Foto Barang 1"
+                        android:contentDescription="Foto Sepatu Sneakers"
                         android:src="@drawable/jordan"
                         android:background="#F0F4F8"
                         android:padding="12dp" />
 
-                    <!-- Nama Barang 1 -->
                     <TextView
                         android:id="@+id/tvNamaBarang1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="12dp"
                         android:text="Sepatu Sneakers Premium"
                         android:textColor="@color/text_primary"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <!-- Harga Barang 1 -->
                     <TextView
                         android:id="@+id/tvHargaBarang1"
                         android:layout_width="match_parent"
@@ -85,130 +82,29 @@
                         android:layout_marginTop="4dp"
                         android:text="Rp 250.000"
                         android:textColor="@color/primary_color"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp"
-                        android:background="@color/divider_color" />
-
-                    <!-- Keterangan 1 -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_keterangan"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvKeteranganBarang1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Sepatu sneakers berkualitas tinggi dengan bahan lembut, sol karet anti licin, dan desain modern yang nyaman digunakan untuk aktivitas sehari-hari."
+                        android:layout_marginTop="6dp"
+                        android:text="Sepatu sneakers berkualitas tinggi dengan bahan lembut, sol karet anti licin, dan desain modern yang nyaman digunakan sehari-hari."
                         android:textColor="@color/text_secondary"
-                        android:textSize="14sp"
-                        android:lineSpacingExtra="2dp" />
+                        android:textSize="13sp"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp"
-                        android:background="@color/divider_color" />
-
-                    <!-- Input Qty Produk 1 -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Input Jumlah / Unit yang dibeli:"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/btnMinus1"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:text="-"
-                            android:textColor="@color/white"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:padding="0dp"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
-                            android:backgroundTint="@color/primary_color"
-                            android:insetTop="0dp"
-                            android:insetBottom="0dp"
-                            android:insetLeft="0dp"
-                            android:insetRight="0dp"
-                            app:cornerRadius="8dp" />
-
-                        <EditText
-                            android:id="@+id/etQty1"
-                            android:layout_width="80dp"
-                            android:layout_height="48dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:gravity="center"
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:text="1"
-                            android:textColor="@color/text_primary"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:background="@android:drawable/editbox_background" />
-
-                        <Button
-                            android:id="@+id/btnPlus1"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:text="+"
-                            android:textColor="@color/white"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:padding="0dp"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
-                            android:backgroundTint="@color/primary_color"
-                            android:insetTop="0dp"
-                            android:insetBottom="0dp"
-                            android:insetLeft="0dp"
-                            android:insetRight="0dp"
-                            app:cornerRadius="8dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:text="Unit"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-
-                    <!-- Tombol Checkout Produk 1 -->
                     <Button
-                        android:id="@+id/btnCheckout1"
+                        android:id="@+id/btnDetail1"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="16dp"
-                        android:text="Checkout Ke Halaman Bayar"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="14dp"
+                        android:text="Detail Barang"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:backgroundTint="@color/primary_color"
                         app:cornerRadius="8dp" />
@@ -216,8 +112,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-
-            <!-- ===================== PRODUK 2 (BARU) ===================== -->
+            <!-- ===================== PRODUK 2 ===================== -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -233,29 +128,26 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- Foto Barang Produk 2 (Silakan ganti android:src dengan nama foto produk 2 kamu) -->
                     <ImageView
                         android:id="@+id/ivFotoBarang2"
                         android:layout_width="match_parent"
-                        android:layout_height="220dp"
+                        android:layout_height="180dp"
                         android:scaleType="fitCenter"
-                        android:contentDescription="Foto Barang 2"
+                        android:contentDescription="Foto Tas Ransel"
                         android:src="@drawable/tas"
                         android:background="#F0F4F8"
                         android:padding="12dp" />
 
-                    <!-- Nama Barang 2 -->
                     <TextView
                         android:id="@+id/tvNamaBarang2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="12dp"
                         android:text="Tas Ransel Backpack Casual"
                         android:textColor="@color/text_primary"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <!-- Harga Barang 2 -->
                     <TextView
                         android:id="@+id/tvHargaBarang2"
                         android:layout_width="match_parent"
@@ -263,130 +155,175 @@
                         android:layout_marginTop="4dp"
                         android:text="Rp 150.000"
                         android:textColor="@color/primary_color"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp"
-                        android:background="@color/divider_color" />
-
-                    <!-- Keterangan 2 -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_keterangan"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvKeteranganBarang2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Tas ransel kasual berkualitas tinggi dengan kompartemen luas, bahan tahan air (waterproof), serta desain stylish yang cocok untuk sekolah, kuliah, maupun kerja."
+                        android:layout_marginTop="6dp"
+                        android:text="Tas ransel kasual berkualitas tinggi dengan kompartemen luas, bahan tahan air (waterproof), serta desain stylish."
                         android:textColor="@color/text_secondary"
-                        android:textSize="14sp"
-                        android:lineSpacingExtra="2dp" />
+                        android:textSize="13sp"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp"
-                        android:background="@color/divider_color" />
-
-                    <!-- Input Qty Produk 2 -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Input Jumlah / Unit yang dibeli:"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/btnMinus2"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:text="-"
-                            android:textColor="@color/white"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:padding="0dp"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
-                            android:backgroundTint="@color/primary_color"
-                            android:insetTop="0dp"
-                            android:insetBottom="0dp"
-                            android:insetLeft="0dp"
-                            android:insetRight="0dp"
-                            app:cornerRadius="8dp" />
-
-                        <EditText
-                            android:id="@+id/etQty2"
-                            android:layout_width="80dp"
-                            android:layout_height="48dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:gravity="center"
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:text="1"
-                            android:textColor="@color/text_primary"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:background="@android:drawable/editbox_background" />
-
-                        <Button
-                            android:id="@+id/btnPlus2"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:text="+"
-                            android:textColor="@color/white"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:padding="0dp"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
-                            android:backgroundTint="@color/primary_color"
-                            android:insetTop="0dp"
-                            android:insetBottom="0dp"
-                            android:insetLeft="0dp"
-                            android:insetRight="0dp"
-                            app:cornerRadius="8dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:text="Unit"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-
-                    <!-- Tombol Checkout Produk 2 -->
                     <Button
-                        android:id="@+id/btnCheckout2"
+                        android:id="@+id/btnDetail2"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="16dp"
-                        android:text="Checkout Ke Halaman Bayar"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="14dp"
+                        android:text="Detail Barang"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/primary_color"
+                        app:cornerRadius="8dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ===================== PRODUK 3 ===================== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivFotoBarang3"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Foto Smartwatch"
+                        android:src="@drawable/smartwatch"
+                        android:background="#F0F4F8"
+                        android:padding="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvNamaBarang3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Smartwatch Digital Sport"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHargaBarang3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Rp 350.000"
+                        android:textColor="@color/primary_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvKeteranganBarang3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Smartwatch olahraga multifungsi dengan pengukur detak jantung, pemantau tidur, dan baterai tahan lama."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+
+                    <Button
+                        android:id="@+id/btnDetail3"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="14dp"
+                        android:text="Detail Barang"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/primary_color"
+                        app:cornerRadius="8dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ===================== PRODUK 4 ===================== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivFotoBarang4"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Foto Headphone"
+                        android:src="@drawable/headphone"
+                        android:background="#F0F4F8"
+                        android:padding="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvNamaBarang4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Headphone Wireless Bluetooth"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHargaBarang4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Rp 450.000"
+                        android:textColor="@color/primary_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvKeteranganBarang4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Headphone nirkabel dengan fitur Noise Cancelling, suara bass mendalam, serta bantalan telinga yang empuk."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:maxLines="2"
+                        android:ellipsize="end" />
+
+                    <Button
+                        android:id="@+id/btnDetail4"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="14dp"
+                        android:text="Detail Barang"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         android:backgroundTint="@color/primary_color"
                         app:cornerRadius="8dp" />

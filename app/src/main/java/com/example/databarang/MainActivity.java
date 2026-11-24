@@ -2,12 +2,9 @@ package com.example.databarang;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -17,20 +14,29 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etQty1;
-    private EditText etQty2;
-
-    // Data Barang 1
+    // Data Produk 1
     private final String namaBarang1 = "Sepatu Sneakers Premium";
     private final int hargaBarang1 = 250000;
-    private final String keteranganBarang1 = "Sepatu sneakers berkualitas tinggi dengan bahan lembut, sol karet anti licin, dan desain modern yang nyaman digunakan untuk aktivitas sehari-hari.";
+    private final String keteranganBarang1 = "Sepatu sneakers berkualitas tinggi dengan bahan lembut, sol karet anti licin, dan desain modern yang sangat nyaman digunakan untuk aktivitas sehari-hari.";
     private final int imageResId1 = R.drawable.jordan;
 
-    // Data Barang 2 (Baru)
+    // Data Produk 2
     private final String namaBarang2 = "Tas Ransel Backpack Casual";
     private final int hargaBarang2 = 150000;
     private final String keteranganBarang2 = "Tas ransel kasual berkualitas tinggi dengan kompartemen luas, bahan tahan air (waterproof), serta desain stylish yang cocok untuk sekolah, kuliah, maupun kerja.";
     private final int imageResId2 = R.drawable.tas;
+
+    // Data Produk 3
+    private final String namaBarang3 = "Smartwatch Digital Sport";
+    private final int hargaBarang3 = 350000;
+    private final String keteranganBarang3 = "Smartwatch olahraga multifungsi dengan pengukur detak jantung, pemantau tidur, penghitung langkah, serta daya tahan baterai hingga 7 hari.";
+    private final int imageResId3 = R.drawable.smartwatch;
+
+    // Data Produk 4
+    private final String namaBarang4 = "Headphone Wireless Bluetooth";
+    private final int hargaBarang4 = 450000;
+    private final String keteranganBarang4 = "Headphone nirkabel dengan teknologi Active Noise Cancelling (ANC), suara bass mendalam, serta bantalan telinga empuk yang nyaman digunakan berjam-jam.";
+    private final int imageResId4 = R.drawable.headphone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,102 +50,65 @@ public class MainActivity extends AppCompatActivity {
         TextView tvNamaBarang1 = findViewById(R.id.tvNamaBarang1);
         TextView tvHargaBarang1 = findViewById(R.id.tvHargaBarang1);
         TextView tvKeteranganBarang1 = findViewById(R.id.tvKeteranganBarang1);
-        etQty1 = findViewById(R.id.etQty1);
-        Button btnPlus1 = findViewById(R.id.btnPlus1);
-        Button btnMinus1 = findViewById(R.id.btnMinus1);
-        Button btnCheckout1 = findViewById(R.id.btnCheckout1);
+        Button btnDetail1 = findViewById(R.id.btnDetail1);
 
         ivFotoBarang1.setImageResource(imageResId1);
         tvNamaBarang1.setText(namaBarang1);
         tvHargaBarang1.setText(formatRupiah(hargaBarang1));
         tvKeteranganBarang1.setText(keteranganBarang1);
 
-        btnPlus1.setOnClickListener(v -> {
-            int qty = getQtyValue(etQty1) + 1;
-            etQty1.setText(String.valueOf(qty));
-        });
-
-        btnMinus1.setOnClickListener(v -> {
-            int qty = getQtyValue(etQty1);
-            if (qty > 1) {
-                qty--;
-                etQty1.setText(String.valueOf(qty));
-            } else {
-                Toast.makeText(MainActivity.this, "Jumlah unit minimal 1", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btnCheckout1.setOnClickListener(v -> prosesCheckout(namaBarang1, hargaBarang1, etQty1, imageResId1));
-
+        btnDetail1.setOnClickListener(v -> bukaDetailBarang(namaBarang1, hargaBarang1, keteranganBarang1, imageResId1));
 
         // ================= INISIALISASI PRODUK 2 =================
         ImageView ivFotoBarang2 = findViewById(R.id.ivFotoBarang2);
         TextView tvNamaBarang2 = findViewById(R.id.tvNamaBarang2);
         TextView tvHargaBarang2 = findViewById(R.id.tvHargaBarang2);
         TextView tvKeteranganBarang2 = findViewById(R.id.tvKeteranganBarang2);
-        etQty2 = findViewById(R.id.etQty2);
-        Button btnPlus2 = findViewById(R.id.btnPlus2);
-        Button btnMinus2 = findViewById(R.id.btnMinus2);
-        Button btnCheckout2 = findViewById(R.id.btnCheckout2);
+        Button btnDetail2 = findViewById(R.id.btnDetail2);
 
         ivFotoBarang2.setImageResource(imageResId2);
         tvNamaBarang2.setText(namaBarang2);
         tvHargaBarang2.setText(formatRupiah(hargaBarang2));
         tvKeteranganBarang2.setText(keteranganBarang2);
 
-        btnPlus2.setOnClickListener(v -> {
-            int qty = getQtyValue(etQty2) + 1;
-            etQty2.setText(String.valueOf(qty));
-        });
+        btnDetail2.setOnClickListener(v -> bukaDetailBarang(namaBarang2, hargaBarang2, keteranganBarang2, imageResId2));
 
-        btnMinus2.setOnClickListener(v -> {
-            int qty = getQtyValue(etQty2);
-            if (qty > 1) {
-                qty--;
-                etQty2.setText(String.valueOf(qty));
-            } else {
-                Toast.makeText(MainActivity.this, "Jumlah unit minimal 1", Toast.LENGTH_SHORT).show();
-            }
-        });
+        // ================= INISIALISASI PRODUK 3 =================
+        ImageView ivFotoBarang3 = findViewById(R.id.ivFotoBarang3);
+        TextView tvNamaBarang3 = findViewById(R.id.tvNamaBarang3);
+        TextView tvHargaBarang3 = findViewById(R.id.tvHargaBarang3);
+        TextView tvKeteranganBarang3 = findViewById(R.id.tvKeteranganBarang3);
+        Button btnDetail3 = findViewById(R.id.btnDetail3);
 
-        btnCheckout2.setOnClickListener(v -> prosesCheckout(namaBarang2, hargaBarang2, etQty2, imageResId2));
+        ivFotoBarang3.setImageResource(imageResId3);
+        tvNamaBarang3.setText(namaBarang3);
+        tvHargaBarang3.setText(formatRupiah(hargaBarang3));
+        tvKeteranganBarang3.setText(keteranganBarang3);
+
+        btnDetail3.setOnClickListener(v -> bukaDetailBarang(namaBarang3, hargaBarang3, keteranganBarang3, imageResId3));
+
+        // ================= INISIALISASI PRODUK 4 =================
+        ImageView ivFotoBarang4 = findViewById(R.id.ivFotoBarang4);
+        TextView tvNamaBarang4 = findViewById(R.id.tvNamaBarang4);
+        TextView tvHargaBarang4 = findViewById(R.id.tvHargaBarang4);
+        TextView tvKeteranganBarang4 = findViewById(R.id.tvKeteranganBarang4);
+        Button btnDetail4 = findViewById(R.id.btnDetail4);
+
+        ivFotoBarang4.setImageResource(imageResId4);
+        tvNamaBarang4.setText(namaBarang4);
+        tvHargaBarang4.setText(formatRupiah(hargaBarang4));
+        tvKeteranganBarang4.setText(keteranganBarang4);
+
+        btnDetail4.setOnClickListener(v -> bukaDetailBarang(namaBarang4, hargaBarang4, keteranganBarang4, imageResId4));
     }
 
-    private void prosesCheckout(String nama, int harga, EditText editTextQty, int imageRes) {
-        String qtyStr = editTextQty.getText().toString().trim();
-        if (TextUtils.isEmpty(qtyStr)) {
-            Toast.makeText(MainActivity.this, "Masukkan jumlah unit terlebih dahulu", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        int qty = Integer.parseInt(qtyStr);
-        if (qty <= 0) {
-            Toast.makeText(MainActivity.this, "Jumlah unit harus minimal 1", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        int totalHarga = harga * qty;
-
-        // Mengirim data barang ke Halaman Bayar via Intent
-        Intent intent = new Intent(MainActivity.this, BayarActivity.class);
+    private void bukaDetailBarang(String nama, int harga, String keterangan, int imageRes) {
+        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
         intent.putExtra("NAMA_BARANG", nama);
         intent.putExtra("HARGA_BARANG", harga);
-        intent.putExtra("QTY", qty);
-        intent.putExtra("TOTAL_HARGA", totalHarga);
+        intent.putExtra("KETERANGAN_BARANG", keterangan);
         intent.putExtra("IMAGE_RES_ID", imageRes);
         startActivity(intent);
-    }
-
-    private int getQtyValue(EditText editText) {
-        String input = editText.getText().toString().trim();
-        if (TextUtils.isEmpty(input)) {
-            return 1;
-        }
-        try {
-            return Integer.parseInt(input);
-        } catch (NumberFormatException e) {
-            return 1;
-        }
     }
 
     public static String formatRupiah(int number) {
